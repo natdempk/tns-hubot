@@ -8,7 +8,7 @@ This README is intended to help get you started. Definitely update and improve
 to talk about your own instance, how to use and deploy, what functionality he
 has, etc!
 
-Testing hubot
+Testing hubot, testing deploy 2.
 
 [heroku]: http://www.heroku.com
 [hubot]: http://hubot.github.com
