@@ -41,6 +41,7 @@ class ScoreKeeper
     if @validate(user, from)
       user = @getUser(user)
       @storage.scores[user]++
+      
       @storage.reasons[user] ||= {}
 
       if reason
@@ -56,6 +57,9 @@ class ScoreKeeper
       user = @getUser(user)
       @storage.scores[user]--
       @storage.reasons[user] ||= {}
+
+      if user == 'alex' or user == 'cynthia'
+        @storage.scores[user]--
 
       if reason
         @storage.reasons[user][reason] ||= 0
