@@ -135,7 +135,10 @@ module.exports = (robot) ->
     reasonString = if typeof reasons == 'object' && Object.keys(reasons).length > 0
                      "#{name} has #{score} points. here are some raisins:" +
                      _.reduce(reasons, (memo, val, key) ->
-                       memo += "\n#{key}: #{val} points"
+                       memo += if val != 0 and val != ''
+                                 "\n#{key}: #{val} points"
+                               else
+                                 ""
                      , "")
                    else
                      "#{name} has #{score} points."
