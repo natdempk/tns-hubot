@@ -69,8 +69,6 @@ module.exports = (robot) ->
             else
               scoreKeeper.subtract(name, from, room, reason)
 
-    msg.send typeof reasonScore
-
     # if we got a score, then display all the things and fire off events!
     if score?
       message = if reason? and typeof reasonScore is 'number'
