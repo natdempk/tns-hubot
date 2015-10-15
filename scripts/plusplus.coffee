@@ -133,7 +133,7 @@ module.exports = (robot) ->
     reasons = scoreKeeper.reasonsForUser(name)
 
     anyNonZero = _.reduce(reasons, (anyNotZero, val, key) -> 
-                   anyNotZero = anyNotZero or (val != 0 and val != '')
+                   anyNotZero or (val != 0 and val != '')
                  , false)
 
     reasonString = if typeof reasons == 'object' and Object.keys(reasons).length > 0 and anyNonZero
