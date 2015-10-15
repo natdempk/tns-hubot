@@ -132,7 +132,7 @@ module.exports = (robot) ->
     score = scoreKeeper.scoreForUser(name)
     reasons = scoreKeeper.reasonsForUser(name)
 
-    reasonString = if typeof reasons == 'object' && Object.keys(reasons).length > 0
+    reasonString = if typeof reasons == 'object' and Object.keys(reasons).length > 0 and _.reduce(reasons, (anyNotZero, val, key) -> anyNotZero = anyNotZero || (val != 0 and val != ''), false)
                      "#{name} has #{score} points. here are some raisins:" +
                      _.reduce(reasons, (memo, val, key) ->
                        memo += if val != 0 and val != ''
