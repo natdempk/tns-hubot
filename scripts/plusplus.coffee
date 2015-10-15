@@ -72,6 +72,7 @@ module.exports = (robot) ->
     # if we got a score, then display all the things and fire off events!
     if score?
       message = if reason? and reasonScore != 0
+                  msg.send reasonScore
                   if reasonScore == 1 or reasonScore == -1
                     "#{name} has #{score} points, #{reasonScore} of which is for #{reason}."
                   else
