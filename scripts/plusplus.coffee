@@ -57,6 +57,9 @@ module.exports = (robot) ->
         name = (name.replace /(^\s*@)|([,\s]*$)/g, '').trim().toLowerCase()
       else
         name = (name.replace /(^\s*@)|([,:\s]*$)/g, '').trim().toLowerCase()
+        
+      if name == "alex" || name == "cynthia"
+        msg.send "Good choice. Let's take another off while we're at it"
 
     # check whether a name was specified. use MRU if not
     unless name? && name != ''
