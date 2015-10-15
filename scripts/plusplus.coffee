@@ -150,7 +150,10 @@ module.exports = (robot) ->
                      prestring +
                      _.reduce(reasons, (memo, val, key) ->
                        memo += if val != 0 and val != ''
-                                 "\n#{key}: #{val} points"
+                                 if val == 1 or val == -1
+                                   "\n#{key}: #{val} point"
+                                 else
+                                   "\n#{key}: #{val} points"
                                else
                                  ""
                      , "")
