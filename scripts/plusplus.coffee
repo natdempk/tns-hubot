@@ -143,7 +143,11 @@ module.exports = (robot) ->
                  , false)
 
     reasonString = if typeof reasons == 'object' and Object.keys(reasons).length > 0 and anyNonZero
-                     "#{name} has #{score} points. here are some raisins:" +
+                     prestring = if score == 1 or score == 1
+                                   "#{name} has #{score} point. Here are some reasons:"
+                                 else
+                                   "#{name} has #{score} points. Here are some reasons:"
+                     prestring +
                      _.reduce(reasons, (memo, val, key) ->
                        memo += if val != 0 and val != ''
                                  "\n#{key}: #{val} points"
@@ -151,7 +155,10 @@ module.exports = (robot) ->
                                  ""
                      , "")
                    else
-                     "#{name} has #{score} points."
+                     if score == 1 or score == -1
+                       "#{name} has #{score} point."
+                     else
+                       "#{name} has #{score} point."
 
     msg.send reasonString
 
