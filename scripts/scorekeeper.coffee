@@ -58,7 +58,8 @@ class ScoreKeeper
       @storage.scores[user]--
       @storage.reasons[user] ||= {}
 
-      if user == 'alex' or user == 'cynthia'
+      if user == 'cynthia'
+        # this is dumb and doesn't belong here -nat
         @storage.scores[user]--
 
       if reason
