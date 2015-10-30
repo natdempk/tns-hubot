@@ -83,7 +83,7 @@ module.exports = (robot) ->
                     else
                       "#{name} has #{score} points, #{reasonScore} of which are for #{reason}."
                 else
-                  if score == 1
+                  if score == 1 or score == -1
                     "#{name} has #{score} point"
                   else
                     "#{name} has #{score} points"
@@ -161,7 +161,7 @@ module.exports = (robot) ->
                      if score == 1 or score == -1
                        "#{name} has #{score} point."
                      else
-                       "#{name} has #{score} point."
+                       "#{name} has #{score} points."
 
     msg.send reasonString
 
