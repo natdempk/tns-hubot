@@ -1,22 +1,22 @@
 {
   "name": "hubot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "author": "natdempk@gmail.com",
   "description": "Can a robot feel shame?",
   "dependencies": {
-    "hubot": "^2.15.0",
-    "hubot-diagnostics": "0.0.1",
-    "hubot-google-images": "^0.2.6",
-    "hubot-google-translate": "^0.2.0",
-    "hubot-help": "^0.1.1",
-    "hubot-maps": "0.0.2",
-    "hubot-pugme": "^0.1.0",
-    "hubot-redis-brain": "0.0.3",
-    "hubot-rules": "^0.1.1",
-    "hubot-shipit": "^0.2.0",
-    "hubot-slack": "^3.4.2",
-    "hubot-plusplus": "^1.2.0"
+    "hubot": "latest",
+    "hubot-diagnostics": "latest",
+    "hubot-google-images": "latest",
+    "hubot-google-translate": "latest",
+    "hubot-help": "latest",
+    "hubot-maps": "latest",
+    "hubot-pugme": "latest",
+    "hubot-redis-brain": "latest",
+    "hubot-rules": "latest",
+    "hubot-shipit": "latest",
+    "hubot-slack": "latest",
+    "hubot-plusplus": "latest"
   },
   "engines": {
     "node": "0.10.x"
