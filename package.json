@@ -20,5 +20,12 @@
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "devDependencies": {
+    "forever": "0.15.1"
+  },
+  "scripts": {
+    "start": "forever start -c coffee --uid hubot node_modules/.bin/hubot -a slack",
+    "stop": "forever stop hubot"
   }
 }
