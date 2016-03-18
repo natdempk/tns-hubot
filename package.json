@@ -27,6 +27,6 @@
   },
   "scripts": {
     "start": "forever start -c coffee --uid hubot node_modules/.bin/hubot -a slack",
-    "stop": "forever stop hubot"
+    "stop": "forever stop node_modules/.bin/hubot"
   }
 }
