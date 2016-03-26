@@ -26,7 +26,7 @@
     "coffee-script": "1.10.0"
   },
   "scripts": {
-    "start": "forever start -c coffee --uid hubot node_modules/.bin/hubot -a slack",
+    "start": "forever start -a -c coffee --uid hubot node_modules/.bin/hubot -a slack",
     "stop": "forever stop node_modules/.bin/hubot"
   }
 }
